@@ -168,8 +168,7 @@ figcaption{
 /*========================================================================*/
 .bottomDivider{
      background-color: DarkGrey;
-     min-width: 1200px;
-     max-width: 1900px;
+     min-width: 1800px;
 }
 /* Style body */
 body{
