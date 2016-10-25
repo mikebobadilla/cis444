@@ -6,7 +6,7 @@
 
 /* Set top container */
 .topDivider{
-     background-image: url("images/flowerField.jpg");
+     background-image: url("image_folder/flowerField.jpg");
      background-size: 100% 100%;
      background-repeat: no-repeat;
      position: relative;
@@ -94,7 +94,7 @@
      padding: 5px;
      padding-right: 20px;
      border-radius: 15px;
-     background: white url("images/magnifying_glass.png") right no-repeat;
+     background: white url("image_folder/magnifying_glass.png") right no-repeat;
      opacity: 0.8;
 }
 /*========================================================================*/
