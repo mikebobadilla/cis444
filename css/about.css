@@ -8,6 +8,8 @@
 body{
      background-color: DarkGrey;
      background-image: url("../image_folder/paradise.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 /* Style for Top Container */
 .topDiv{
