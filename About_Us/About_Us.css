@@ -126,6 +126,16 @@ body{
      font-size: 30px;
 }
 /*========================================================================*/
+/*Payment pictures*/
+
+#visaCard, #MasterCard, #AmericanExpress, #DiscoverCard
+{
+  height: 123px;
+  width: 50;
+  text-align: center;
+}
+
+/*========================================================================*/
 /* Footer to hold any social media links  */
 .footer{
      width: 1300px;
