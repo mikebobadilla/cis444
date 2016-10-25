@@ -7,6 +7,7 @@
 /* Set background color for body*/
 body{
      background-color: DarkGrey;
+     background-image: url("../image_folder/paradise.jpg");
 }
 /* Style for Top Container */
 .topDiv{
@@ -102,7 +103,7 @@ body{
      height: 100px;
      margin-top: 20px;
 }
-#aboutUsTitle{
+.aboutUsTitle{
      padding-left: 90px;
      padding-top: 40px;
      font-size: 50px;
