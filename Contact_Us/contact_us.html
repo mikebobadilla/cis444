@@ -19,9 +19,9 @@
                <!-- Menu Bar -->
                <ul class = "menu">
                     <li id = "businessName"> <a href = "#"> N&ampH Wholesale Florist Co., Inc. </a> </li>
-                    <li> <a id = "menuHome" href = "#home"> Home </a> </li>
-                    <li> <a id = "menuAbout" href = "#aboutus"> About Us </a> </li>
-                    <li> <a id = "menuContact" href = "#contactus"> Contact Us </a> </li>
+                    <li> <a id = "menuHome" href = "Main_Page/Main_Page.html"> Home </a> </li>
+                    <li> <a id = "menuAbout" href = "About_Us/About_Us.html"> About Us </a> </li>
+                    <li> <a id = "menuContact" href = "Contact_Us/contact_us.html"> Contact Us </a> </li>
                     <li> <a id = "menuFlowers" href = "#flowers"> Flowers </a> </li>
                </ul>
           </div> <!-- END TOP DIV FOR MENU BAR -->
@@ -83,13 +83,22 @@
                     </p>
                     <br /><br />
                     <div class = "textBoxes">
-                         <form action = ""> E-Mail Address: <br />
-                              <input id = "emailNameBox" type = "text" placeholder = "flowers@gmail.com" size = "35" >
+                         <form action = "">
+                              E-Mail Address: <br />
+                                   <input type = "text" id = "emailNameBox" placeholder = "flowers@gmail.com" size = "35" >
+                                   <br />
+                              Questions or Concerns: <br />
+                                   <input type = "text "id = "qAndA" placeholder = "Questions, Comments, or Concerns" size = "800">
+                                   <br/>
+                              <p class = "submitAndResetButtons">
+                                   <label class = "submit">
+                                        <button type = "submit" id = "submitButton" value = "Submit" onclick = ""> Submit </button>
+                                   </label>
+                                   <label class = "reset">
+                                        <button type = "reset" id = "resetButton" value = "Reset"> Reset </button>
+                                   </label>
+                              </p>
                          </form>
-                         <br />
-                         <form action = ""> Questions or Concerns: <br />
-                              <input id = "qAndA" type = "text" placeholder = "Questions, Comments, or Concerns" size = "800">
-                         <form />
                     </div>
                </div>
                <!-- Footer -->
