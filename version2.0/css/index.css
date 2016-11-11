@@ -1,0 +1,176 @@
+/* Jason Sneddon - snedd001
+/* Roger Delgado - delga051
+ * CIS 444 - Term Project
+ * Main_Page.css
+ *
+ */
+
+/* Set top container */
+.topDivider{
+     position: relative;
+     margin-top: -16px;
+     min-width: 1024px;
+     max-width: 1800px;
+     background-color: #3498DB;
+}
+/*========================================================================*/
+/* Style Menu Bar */
+.menu{
+     position: relative;
+     list-style-type: none;
+     padding: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     min-width: 1024px;
+     overflow: hidden;
+     background-color: black;
+     opacity: 0.7;
+}
+/* Set business name to the left of menu bar */
+#businessName{
+     float: left;
+}
+/* Style Business Name */
+#businessName a{
+     font-weight: bold;
+     font-size: 1.5em;
+     font-family: cursive;
+}
+/* No hover over Company Name*/
+#businessName a:hover{
+     background-color: black;
+     text-decoration: none;
+     cursor: default;
+}
+/* Menu list items */
+.menu li{
+     color: white;
+     background-color:transparent;
+     float: right;
+}
+/* Menu list anchor tags */
+.menu li a{
+     display:block;
+     color: white;
+     text-align: center;
+     font-family: arial;
+     padding: 15px 20px;
+     text-decoration: none;
+}
+/* Set hover for right menu links */
+.menu li a:hover{
+     background-color: green;
+     text-decoration: underline;
+     text-decoration-style: solid;
+}
+/*========================================================================*/
+/* Label before search bar */
+.searchHeader{
+     text-transform: uppercase;
+     text-align: center;
+     margin-top: 200px;
+     font-size: 36px;
+     font-family: fantasy;
+     color: white;
+}
+/* Search Container */
+.searchContainer{
+     position:relative;
+     box-sizing:content-box;
+}
+/* Container for search box */
+#innerSearch{
+     width: 300px;
+     margin: 0 auto;
+     margin-top: 30px;
+}
+/* Search box */
+#searchBox{
+     width: 300px;
+     height: 35px;
+     font-size: 18px;
+     padding: 5px;
+     padding-right: 20px;
+     border-radius: 15px;
+     background: white url("../image_folder/magnifying_glass.png") right no-repeat;
+     opacity: 0.8;
+}
+/*========================================================================*/
+.middleDivider{
+     position: relative;
+     margin: 0 auto;
+     min-width: 1024px;
+     max-width: 1800px;
+     background-color: #1F618D;
+}
+#newInventory{
+     margin-top: 10px;
+     text-align: center;
+     font-style: oblique;
+     font-family: sans-serif;
+     color: black;
+     margin-bottom: 0px;
+}
+/*========================================================================*/
+/* Flower div containers */
+.Flowers{
+     position: relative;
+     display: block;
+     padding: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     min-width: 1024px;
+     max-width: 1800px;
+     overflow: hidden;
+     background-color: #1F618D;
+}
+/* Flower list items */
+.Flowers li{
+     background-color: #1F618D;
+     position: relative;
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+     float: left;
+}
+/* Flower list anchor tags */
+.Flowers li a{
+     font-size: 20px;
+     color: white;
+     text-align: center;
+     font-family: arial;
+     padding-left: 40px;
+     text-decoration: none;
+     overflow: hidden;
+}
+.Flowers li figure a img{
+     display: block;
+     margin-right: 75px;
+     margin-left: 50px;
+     padding-left: 70px;
+}
+/* Flower unordered lists */
+.flowerRows{
+     list-style-type: none;
+     margin-left: 40px;
+     margin-right: auto;
+}
+/* Flower Captions */
+figcaption{
+     font-size: 20px;
+     font-weight: bold;
+     font-family: arial;
+     text-align: center;
+     color: black;
+}
+/*========================================================================*/
+.bottomDivider{
+     background-color: #1F618D;
+     min-width: 1024px;
+}
+/* Style body */
+body{
+     background-color: #1F618D;
+     margin:auto;
+}
+/*========================================================================*/

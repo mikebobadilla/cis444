@@ -1,0 +1,147 @@
+/* Jason Sneddon - snedd001
+/* Roger Delgado - delga051
+ * CIS 444 - Term Project
+ * About_Us.css
+ *
+ */
+
+/* Set background color for body*/
+body{
+     background-color: #2ECC71;
+     background-size: cover;
+}
+/* Style for Top Container */
+.topDiv{
+     position: relative;
+     margin-top: -16px;
+     min-width: 1024px;
+}
+/* Style Menu Bar */
+.menu{
+     position: relative;
+     list-style-type: none;
+     padding: 20px;
+     margin-left: -16;
+     margin-right: auto;
+     min-width: 1024px;
+     overflow: hidden;
+     background-color: black;
+     opacity: 0.7;
+}
+/* Style Business Name in menu bar */
+#businessName{
+     float: left;
+}
+/* Style Business Name anchor tag */
+#businessName a{
+     font-weight: bold;
+     font-size: 1.5em;
+     font-family: cursive;
+}
+/* No hover over Business Name*/
+#businessName a:hover{
+     background-color: black;
+     text-decoration: none;
+     cursor: default;
+}
+/* All Menu list items */
+.menu li{
+     color: white;
+     background-color:transparent;
+     float: right;
+}
+/* All Menu list anchor tags */
+.menu li a{
+     display:block;
+     color: white;
+     text-align: center;
+     font-family: arial;
+     padding: 15px 20px;
+     text-decoration: none;
+}
+/* Set hover for right menu links */
+.menu li a:hover{
+     background-color: green;
+     text-decoration: underline;
+     text-decoration-style: solid;
+}
+/*========================================================================*/
+/* Container that holds all content excluding Menu Bar */
+.restOfPage{
+     position: relative;
+     padding: 0 0 0 55px;
+     min-width: 1024px;
+}
+/*========================================================================*/
+/* Left sidebar for Popular Flowers */
+.sidebar{
+     position:absolute;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     margin-right: -10px;
+     margin-left: 100px;
+     width: 350px;
+     height: 1200px;
+     background: #145A32;
+     min-width: 1024;
+}
+#popularProductsTitle{
+     text-align: center;
+     font-size: 35px;
+     color: white;
+}
+#firstPopular, #secondPopular, #thirdPopular{
+     padding-right: 30px;
+     font-size: 20px;
+     color: white;
+     text-align: center;
+}
+/*========================================================================*/
+/* Header for About Us */
+.header{
+     min-width: 1024px;
+     height: 100px;
+     margin-top: 20px;
+}
+.aboutUsTitle{
+     padding-left: 90px;
+     padding-top: 40px;
+     font-size: 40px;
+     font-weight: bold;
+     font-family: arial;
+     text-align: left;
+     color: black;
+}
+/*========================================================================*/
+/* Body of About Us for Picture and Info */
+.content{
+     min-width: 1024px;
+     height: 1000px;
+     margin-top: 10px;
+}
+#farmPic{
+     padding-left: 30px;
+}
+#history{
+     padding-left: 90px;
+     font-size: 30px;
+}
+/*========================================================================*/
+/*Payment pictures*/
+
+#visaCard, #MasterCard, #AmericanExpress, #DiscoverCard
+{
+  height: 123px;
+  width: 50;
+  text-align: center;
+}
+
+/*========================================================================*/
+/* Footer to hold any social media links  */
+.footer{
+     min-width: 1024px;
+     height: 50px;
+     margin-top: 10px;
+}
+/*================    ***     END     ***      ==========================*/

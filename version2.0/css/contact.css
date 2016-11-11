@@ -1,0 +1,162 @@
+/* Jason Sneddon - snedd001
+/*Roger Delgado - delga051
+ * CIS 444 - Term Project
+ * contact_us.css
+ *
+ */
+
+/* Set background color for body*/
+body{
+     background-color: #E74C3C;
+}
+
+/* Style for Top Container */
+.topDiv{
+     position: relative;
+     margin-top: -16px;
+     max-width: 1800px;
+     min-width: 1024px;
+}
+/* Style Menu Bar */
+.menu{
+     position: relative;
+     list-style-type: none;
+     padding: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     min-width: 1024px;
+     overflow: hidden;
+     background-color: black;
+     opacity: 0.7;
+}
+/* Style Business Name in menu bar */
+#businessName{
+     float: left;
+}
+/* Style Business Name anchor tag */
+#businessName a{
+     font-weight: bold;
+     font-size: 1.5em;
+     font-family: cursive;
+}
+/* No hover over Business Name*/
+#businessName a:hover{
+     background-color: black;
+     text-decoration: none;
+     cursor: default;
+}
+/* All Menu list items */
+.menu li{
+     color: white;
+     background-color:transparent;
+     float: right;
+}
+/* All Menu list anchor tags */
+.menu li a{
+     display:block;
+     color: white;
+     text-align: center;
+     font-family: arial;
+     padding: 15px 20px;
+     text-decoration: none;
+}
+/* Set hover for right menu links */
+.menu li a:hover{
+     background-color: green;
+     text-decoration: underline;
+     text-decoration-style: solid;
+}
+/*========================================================================*/
+/* Container that holds all content excluding Menu Bar */
+.restOfPage{
+     position: relative;
+     padding: 0 0 0 55px;
+     min-width: 1024px;
+}
+/*========================================================================*/
+/* Left sidebar for Popular Flowers */
+.sidebar{
+     position:absolute;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     margin-right: -10px;
+     margin-left: 100px;
+     width: 350px;
+     height: 1000px;
+     background: #641E16;
+     min-width: 1024;
+}
+#popularProductsTitle{
+     text-align: center;
+     font-size: 35px;
+     color: white;
+}
+#firstPopular, #secondPopular, #thirdPopular{
+     padding-right: 30px;
+     font-size: 20px;
+     color: white;
+     text-align: center;
+}
+/*========================================================================*/
+/* Header for About Us */
+.header{
+     width: 1024px;
+     height: 100px;
+     margin-top: 20px;
+}
+#contactUsTitle{
+     padding-left: 90px;
+     padding-top: 40px;
+     font-size: 50px;
+     font-weight: bold;
+     font-family: arial;
+     text-align: left;
+     color: black;
+}
+/*========================================================================*/
+/* Body of About Us for Picture and Info */
+.content{
+     width: 1024px;
+     height: 1000px;
+     margin-top: 10px;
+}
+#companyInfo{
+     padding-left: 90px;
+     font-size: 30px;
+}
+/* Text boxes for client email and comments */
+.textBoxes{
+     padding-left: 90px;
+     font-size: 28px;
+}
+#emailNameBox{
+     font-size: 16px;
+     width: 400px;
+}
+#qAndA{
+     font-size: 16px;
+     height: 200px;
+     width: 400px;
+}
+/* Submit and Reset Buttons */
+.submitAndResetButtons{
+     padding-left: 110px;
+}
+.submit{
+     padding-right: 20px;
+}
+#submitButton{
+     font-size: 16px;
+}
+#resetButton{
+     font-size: 16px;
+}
+/*========================================================================*/
+/* Footer to hold any social media links  */
+.footer{
+     width: 1024px;
+     height: 50px;
+     margin-top: 10px;
+}
+/*================    ***     END     ***      ==========================*/
