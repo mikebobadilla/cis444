@@ -10,6 +10,10 @@ body{
      background-color: #2ECC71;
      background-size: cover;
 }
+
+li {
+  list-style-type: none;
+}
 /* Style for Top Container */
 .topDiv{
      position: relative;
