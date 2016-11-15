@@ -1,4 +1,5 @@
 /* Jason Sneddon - snedd001
+/* Roger Delgado - delga051
  * CIS 444 - Term Project
  * Main_Page.css
  *
@@ -6,13 +7,11 @@
 
 /* Set top container */
 .topDivider{
-     background-image: url("../image_folder/flowerField.jpg");
-     background-size: 100% 100%;
-     background-repeat: no-repeat;
      position: relative;
      margin-top: -16px;
-     min-width: 1800px;
-     height: 500px;
+     min-width: 1024px;
+     max-width: 1800px;
+     background-color: #3498DB;
 }
 /*========================================================================*/
 /* Style Menu Bar */
@@ -22,8 +21,7 @@
      padding: 20px;
      margin-left: auto;
      margin-right: auto;
-     min-width: 1000px;
-     max-width: 1900px;
+     min-width: 1024px;
      overflow: hidden;
      background-color: black;
      opacity: 0.7;
@@ -101,9 +99,9 @@
 .middleDivider{
      position: relative;
      margin: 0 auto;
-     min-width: 1800px;
-     max-width: 1900px;
-     background-color: DarkGrey;
+     min-width: 1024px;
+     max-width: 1800px;
+     background-color: #1F618D;
 }
 #newInventory{
      margin-top: 10px;
@@ -121,14 +119,14 @@
      padding: 20px;
      margin-left: auto;
      margin-right: auto;
-     min-width: 1100px;
+     min-width: 1024px;
      max-width: 1800px;
      overflow: hidden;
-     background-color: DarkGrey;
+     background-color: #1F618D;
 }
 /* Flower list items */
 .Flowers li{
-     background-color: DarkGrey;
+     background-color: #1F618D;
      position: relative;
      text-align: center;
      margin-left: auto;
@@ -167,12 +165,12 @@ figcaption{
 }
 /*========================================================================*/
 .bottomDivider{
-     background-color: DarkGrey;
-     min-width: 1800px;
+     background-color: #1F618D;
+     min-width: 1024px;
 }
 /* Style body */
 body{
-     background-color: black;
+     background-color: #1F618D;
      margin:auto;
 }
 /*========================================================================*/

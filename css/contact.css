@@ -1,4 +1,5 @@
 /* Jason Sneddon - snedd001
+/*Roger Delgado - delga051
  * CIS 444 - Term Project
  * contact_us.css
  *
@@ -6,14 +7,15 @@
 
 /* Set background color for body*/
 body{
-     background-color: DarkGrey;
+     background-color: #E74C3C;
 }
 
 /* Style for Top Container */
 .topDiv{
      position: relative;
      margin-top: -16px;
-     min-width: 1800px;
+     max-width: 1800px;
+     min-width: 1024px;
 }
 /* Style Menu Bar */
 .menu{
@@ -22,7 +24,7 @@ body{
      padding: 20px;
      margin-left: auto;
      margin-right: auto;
-     min-width: 1700px;
+     min-width: 1024px;
      overflow: hidden;
      background-color: black;
      opacity: 0.7;
@@ -69,7 +71,7 @@ body{
 .restOfPage{
      position: relative;
      padding: 0 0 0 55px;
-     min-width: 1800px;
+     min-width: 1024px;
 }
 /*========================================================================*/
 /* Left sidebar for Popular Flowers */
@@ -78,12 +80,12 @@ body{
      top: 0;
      bottom: 0;
      right: 0;
-     margin-right: 50px;
+     margin-right: -10px;
      margin-left: 100px;
      width: 350px;
      height: 1000px;
-     background: black;
-     min-width: 1700;
+     background: #641E16;
+     min-width: 1024;
 }
 #popularProductsTitle{
      text-align: center;
@@ -99,7 +101,7 @@ body{
 /*========================================================================*/
 /* Header for About Us */
 .header{
-     width: 1300px;
+     width: 1024px;
      height: 100px;
      margin-top: 20px;
 }
@@ -115,7 +117,7 @@ body{
 /*========================================================================*/
 /* Body of About Us for Picture and Info */
 .content{
-     width: 1300px;
+     width: 1024px;
      height: 1000px;
      margin-top: 10px;
 }
@@ -153,7 +155,7 @@ body{
 /*========================================================================*/
 /* Footer to hold any social media links  */
 .footer{
-     width: 1300px;
+     width: 1024px;
      height: 50px;
      margin-top: 10px;
 }
