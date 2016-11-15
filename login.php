@@ -18,6 +18,10 @@
 					<input type="text" name="login-username" value="">
 					<label for="login-password">Password</label>
 					<input type="password" name="login-password" value="">
+					<br>
+					<div class="form-row">
+						<button type="submit" name="button">Submit</button>
+					</div>
 				</form>
 			</div>
 
