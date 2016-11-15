@@ -1,0 +1,109 @@
+/* Jason Sneddon - snedd001
+/* Roger Delgado - delga051
+ * CIS 444 - Term Project
+ * Main_Page.css
+ *
+ */
+
+/* Set top container */
+.topDivider{
+      background-image: url("../image_folder/nh_viewbelowfarm.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+     position: relative;
+     margin-top: -16px;
+     min-width: 1280px;
+     min-height: 960px;
+}
+/*========================================================================*/
+/* Style Menu Bar */
+.menu{
+     position: relative;
+     list-style-type: none;
+     padding: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     min-width: 1024px;
+     overflow: hidden;
+     background-color: black;
+     opacity: 0.7;
+}
+/* Set business name to the left of menu bar */
+#businessName{
+     float: left;
+}
+/* Style Business Name */
+#businessName a{
+     font-weight: bold;
+     font-size: 1.5em;
+     font-family: cursive;
+}
+/* No hover over Company Name*/
+#businessName a:hover{
+     background-color: black;
+     text-decoration: none;
+     cursor: default;
+}
+/* Menu list items */
+.menu li{
+     color: white;
+     background-color:transparent;
+     float: right;
+}
+/* Menu list anchor tags */
+.menu li a{
+     display:block;
+     color: white;
+     text-align: center;
+     font-family: arial;
+     padding: 15px 20px;
+     text-decoration: none;
+}
+/* Set hover for right menu links */
+.menu li a:hover{
+     background-color: green;
+     text-decoration: underline;
+     text-decoration-style: solid;
+}
+/*========================================================================*/
+/* Label before search bar */
+.searchHeader{
+     text-transform: uppercase;
+     text-align: center;
+     margin-top: 200px;
+     font-size: 36px;
+     font-family: fantasy;
+     color: white;
+}
+/* Search Container */
+.searchContainer{
+     position:relative;
+     box-sizing:content-box;
+}
+/* Container for search box */
+#innerSearch{
+     width: 300px;
+     margin: 0 auto;
+     margin-top: 30px;
+}
+/* Search box */
+#searchBox{
+     width: 300px;
+     height: 35px;
+     font-size: 18px;
+     padding: 5px;
+     padding-right: 20px;
+     border-radius: 15px;
+     background: white url("../image_folder/magnifying_glass.png") right no-repeat;
+     opacity: 0.8;
+}
+/*========================================================================*/
+
+/*========================================================================*/
+
+/* Style body */
+body{
+     background-color: black;
+     margin:auto;
+}
+/*========================================================================*/
