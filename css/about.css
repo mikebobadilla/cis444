@@ -121,7 +121,6 @@ li {
 /* Body of About Us for Picture and Info */
 .content{
      min-width: 1024px;
-     height: 1000px;
      margin-top: 10px;
 }
 #farmPic{
@@ -130,6 +129,7 @@ li {
 #history{
      padding-left: 90px;
      font-size: 30px;
+     max-width: 800px;
 }
 /*========================================================================*/
 /*Payment pictures*/
