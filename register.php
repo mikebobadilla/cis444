@@ -63,10 +63,10 @@
 	  // if there's no error, continue to signup
 	  if( !$error ) {
 
-	   $query = "INSERT INTO USER (FirstName,LastName,UserName,Email,Password,Permission, Company) VALUES('$name','$name','$name','$email','$password',1,'$name')";
+	   $query = "INSERT INTO USERS (FirstName,LastName,Username,Email, Password, Permissions, Company) VALUES ('Mike','BOB','005','$email','$password','Admin','$name')";
 
-	   $res = mysqli_query($query);
-		 
+	   $res = mysqli_query($link, $query);
+		 echo $query;
 		 echo $res;
 
 	   if ($res) {
