@@ -17,9 +17,11 @@
 	  $email = strip_tags($email);
 	  $email = htmlspecialchars($email);
 
+
 	  $pass = trim($_POST['pass']);
 	  $pass = strip_tags($pass);
 	  $pass = htmlspecialchars($pass);
+
 
 	  // basic name validation
 	  if (empty($name)) {
@@ -39,9 +41,9 @@
 	   $emailError = "Please enter valid email address.";
 	  } else {
 	   // check email exist or not
-	   $query = "SELECT userEmail FROM users WHERE userEmail='$email'";
-	   $result = mysql_query($query);
-	   $count = mysql_num_rows($result);
+	   $query = "SELECT Email FROM USER WHERE Email='$email'";
+	   $result = mysqli_query($query);
+	   $count = mysqli_num_rows($result);
 	   if($count!=0){
 	    $error = true;
 	    $emailError = "Provided Email is already in use.";
@@ -58,12 +60,14 @@
 
 	  // password encrypt using SHA256();
 	  $password = hash('sha256', $pass);
-
 	  // if there's no error, continue to signup
 	  if( !$error ) {
 
-	   $query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$name','$email','$password')";
-	   $res = mysql_query($query);
+	   $query = "INSERT INTO USER (FirstName,LastName,UserName,Email,Password,Permission, Company) VALUES('$name','$name','$name','$email','$password',1,'$name')";
+
+	   $res = mysqli_query($query);
+		 
+		 echo $res;
 
 	   if ($res) {
 	    $errTyp = "success";
@@ -76,13 +80,18 @@
 	    $errMSG = "Something went wrong, try again later...";
 	   }
 
-	  }
+	 } else {
+		 echo "there was an error";
+		 echo $nameError;
+		 echo $emailError;
+		 echo $passError;
+	 }
 	}
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Login Page</title>
+		<title>Registration Page Page</title>
 		<link rel="stylesheet" type="text/css" href="css/login.css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
@@ -92,22 +101,40 @@
 		</div>
 
 		<div class="content m-l-20">
-			<h3>Login</h3>
+			<?php
+			if ( isset($errMSG) ) {echo $errMSG;}
+			?>
+			<h3>Create New User</h3>
 			<div class="form-wrapper" class="login">
-				<form class="form-content" action="login.php" method="post">
-					<label for="email">Email</label>
-					<input type="text" name="login-username" value="">
-					<label for="pass">Password</label>
-					<input type="password" name="login-password" value="">
-					<br>
-					<div class="form-row">
-						<button type="submit" name="button">Submit</button>
+				<form class="form-row w-400" action="register.php" method="post">
+					<div class="form-content">
+						<label for="name">Name</label>
+						<input type="text" name="name" value="">
+						<label for="address">Address</label>
+						<input type="text" name="address" value="">
+						<label for="city">City</label>
+						<input type="text" name="city" value="">
+						<label for="state">State</label>
+						<input type="text" name="state" value="">
+						<label for="zip">Zip</label>
+						<input type="text" name="zip" value="">
+						<label for="company">Company</label>
+						<input type="text" name="company" value="">
+						<br>
+						<div class="form-row w-300">
+							<button type="reset" name="button">Reset</button>
+							<button type="submit" name="btn-signup">Submit</button>
+						</div>
+					</div>
+					<div class="form-content">
+						<label for="email">Email</label>
+						<input type="text" name="email" value="">
+						<label for="pass">Password</label>
+						<input type="password" name="pass" value="">
+
 					</div>
 				</form>
 			</div>
-			<br>
-			<a href="register.php">If you dont have an account, click here to register</a>
-
 		</div>
 	</body>
 </html>

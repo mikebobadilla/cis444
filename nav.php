@@ -3,15 +3,16 @@
 		 <ul class="menu">
 					<li id="businessName"> <a href="index.php"> N&amp;H Wholesale Florist Co., Inc. </a> </li>
 
+					<li> <a id=cart href="cart.php"><img src="image_folder/cart.png" alt="" width="30px" height="30px"/></a></li>
 					<?php
-						session_start();
+						include("includes/session.php");
 						if(!isset($_SESSION["username"]) || empty($_SESSION["username"])){
 						?>
 						<li> <a id="menuLogin" href="login.php"> Login </a></li>
 						<?php
 						} else {
 							?>
-							<li> <a id="logout" href="logout.php"> Logout </a></li>
+							<li> <a id="logout" href="logout.php?logout"> Logout </a></li>
 							<?php
 						}
 					?>
