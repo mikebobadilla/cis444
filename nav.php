@@ -6,7 +6,7 @@
 					<li> <a id=cart href="cart.php"><img src="image_folder/cart.png" alt="" width="30px" height="30px"/></a></li>
 					<?php
 						include("includes/session.php");
-						if(!isset($_SESSION["username"]) || empty($_SESSION["username"])){
+						if(!isset($_SESSION["user"]) || empty($_SESSION["user"])){
 						?>
 						<li> <a id="menuLogin" href="login.php"> Login </a></li>
 						<?php
