@@ -1,5 +1,5 @@
 <?php
-	if (isset($_SESSION['user'])){
+	if (isset($_SESSION["user"])){
 		header("Location: index.php");
 	}
 	ob_start();
@@ -20,23 +20,17 @@
 	  if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
 	   $error = true;
 	   $emailError = "Please enter valid email address.";
-	  } else {
-	   // check email exist or not
-	   $query = "SELECT Email FROM USERS WHERE Email = '$email'";
-	   $result = mysqli_query($link, $query);
-	   $count = mysqli_num_rows($result);
-	   if($count!=0){
-	    $error = true;
-	    $emailError = "Provided Email is already in use.";
-	   }
+		 echo $emailError;
 	  }
 	  // password validation
 	  if (empty($pass)){
 	   $error = true;
 	   $passError = "Please enter password.";
+		 echo $passError;
 	  } else if(strlen($pass) < 6) {
 	   $error = true;
 	   $passError = "Password must have atleast 6 characters.";
+		 echo $passError;
 	  }
 
 	  // password encrypt using SHA256();
@@ -49,8 +43,8 @@
     	$row=mysqli_fetch_array($res);
     	$count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
 
-	    if( $count == 1 && $row['Password']==$password ) {
-	      $_SESSION['user'] = $row['userID'];
+	    if( $count == 1 && $row['Password'] == $password ) {
+	      $_SESSION['user'] = $row['Email'];
 				echo "success";
 	      header("Location: index.php");
 	    } else {
@@ -80,9 +74,9 @@
 			<div class="form-wrapper" class="login">
 				<form class="form-content" action="login.php" method="post">
 					<label for="email">Email</label>
-					<input type="text" name="login-username" value="">
+					<input type="text" name="email" value="">
 					<label for="pass">Password</label>
-					<input type="password" name="login-password" value="">
+					<input type="password" name="pass" value="">
 					<br>
 					<div class="form-row">
 						<button type="submit" name="btn-signin">Submit</button>
