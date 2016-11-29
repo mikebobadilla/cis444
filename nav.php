@@ -3,7 +3,18 @@
 		 <ul class="menu">
 					<li id="businessName"> <a href="index.php"> N&amp;H Wholesale Florist Co., Inc. </a> </li>
 
-					<li> <a id="menuLogin" href="login.php"> Login </a></li>
+					<?php
+						session_start();
+						if(!isset($_SESSION["username"]) || empty($_SESSION["username"])){
+						?>
+						<li> <a id="menuLogin" href="login.php"> Login </a></li>
+						<?php
+						} else {
+							?>
+							<li> <a id="logout" href="logout.php"> Logout </a></li>
+							<?php
+						}
+					?>
 				 	<li> <a id="menuContact" href="contact.php"> Contact Us </a></li>
 					<li> <a id="menuAbout" href="about.php"> About Us </a></li>
 					<li> <a id="menuSearch" href="search.php"> Inventory </a></li>
