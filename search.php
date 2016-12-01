@@ -1,8 +1,18 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <!-- CIS 444 - Term Project
      index.html
 
 
+=======
+<!-- Jason Sneddon - snedd001
+     Roger Delgado - delga051
+     Kristina Nystrom - nystr001
+     Zachary Go - goo06
+     Michael Bobadilla - bobad05
+     CIS 444 - Term Project
+     search.php
+>>>>>>> c0365bfd58babdb7e5e147ac478d15184eae523c
 -->
 
 <html lang="en">
