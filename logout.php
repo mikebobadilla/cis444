@@ -1,3 +1,11 @@
+<!-- Jason Sneddon - snedd001
+     Roger Delgado - delga051
+     Kristina Nystrom - nystr001
+     Zachary Go - goo06
+     Michael Bobadilla - bobad05
+     CIS 444 - Term Project
+     logout.php
+-->
 <?php
 	session_start();
 
