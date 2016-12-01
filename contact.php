@@ -8,7 +8,7 @@
 
 <html lang="en">
      <head>
-          <title> N&amp;H Wholesale Florist Co., Inc. </title>
+          <title> N&H Wholesale Florist Co., Inc. </title>
           <meta charset="utf-8" />
           <!-- Link to CSS file -->
           <link rel="stylesheet" type="text/css" href="css/contact.css" />

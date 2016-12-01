@@ -8,7 +8,7 @@
 
 <html lang="en">
      <head>
-          <title> N&amp;H Wholesale Florist Co., Inc. </title>
+          <title> N&H Wholesale Florist Co., Inc. </title>
           <meta charset="utf-8" />
           <!-- Link to CSS file -->
           <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -55,17 +55,18 @@
                                    <figcaption> Orange Pin Cushion </figcaption>
                               </figure>
                          </li>
-			<li>
-                              <figure>
-                                   <a href="#proteaPinkIce"> <img src="image_folder/proteaPinkIce.jpg" alt="Protea Pink Ice Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Protea Pink Ice Flower </figcaption>
-                              </figure>
-                         </li>
-                    </ul>
+
                </div>
                <!-- Second Row of Flower Pictures -->
+
                <div class="Flowers">
                     <ul class="flowerRows">
+                      <li>
+                              <figure>
+                                   <a href="#proteaPinkIce"> <img src="image_folder/proteaPinkIce.jpg" alt="Protea Pink Ice Flower" style="width: 250px; height: 250px; border: 0"></a>
+                                      <figcaption> Protea Pink Ice Flower </figcaption>
+                              </figure>
+                       </li>
 
                          <li>
                               <figure>
