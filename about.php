@@ -5,7 +5,7 @@
      Zachary Go - goo06
      Michael Bobadilla - bobad05
      CIS 444 - Term Project
-     About_Us.html
+     About_Us.php
 
 -->
 
