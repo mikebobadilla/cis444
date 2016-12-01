@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!-- Jason Sneddon - snedd001
-	Roger Delgado - delga051
-	Kristina Nystrom - nystr001
-     CIS 444 - Term Project
+<!-- CIS 444 - Term Project
      About_Us.html
 
 -->

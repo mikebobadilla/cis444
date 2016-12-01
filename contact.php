@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- Jason Sneddon - snedd001
-     CIS 444 - Term Project
+<!-- CIS 444 - Term Project
      contact_us.html
 
 
