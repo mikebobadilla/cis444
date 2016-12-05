@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <!-- Jason Sneddon - snedd001
+     Roger Delgado - delga051
+     Kristina Nystrom - nystr001
+     Zachary Go - goo06
+     Michael Bobadilla - bobad05
      CIS 444 - Term Project
-     index.html
-
-
+     index.php
 -->
 
 <html lang="en">
@@ -56,17 +58,18 @@
                                    <figcaption> Orange Pin Cushion </figcaption>
                               </figure>
                          </li>
-			<li>
-                              <figure>
-                                   <a href="#proteaPinkIce"> <img src="image_folder/proteaPinkIce.jpg" alt="Protea Pink Ice Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Protea Pink Ice Flower </figcaption>
-                              </figure>
-                         </li>
-                    </ul>
+
                </div>
                <!-- Second Row of Flower Pictures -->
+
                <div class="Flowers">
                     <ul class="flowerRows">
+                      <li>
+                              <figure>
+                                   <a href="#proteaPinkIce"> <img src="image_folder/proteaPinkIce.jpg" alt="Protea Pink Ice Flower" style="width: 250px; height: 250px; border: 0"></a>
+                                      <figcaption> Protea Pink Ice Flower </figcaption>
+                              </figure>
+                       </li>
 
                          <li>
                               <figure>

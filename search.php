@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <!-- Jason Sneddon - snedd001
+     Roger Delgado - delga051
+     Kristina Nystrom - nystr001
+     Zachary Go - goo06
+     Michael Bobadilla - bobad05
      CIS 444 - Term Project
-     index.html
-
-
+     search.php
 -->
 
 <html lang="en">
      <head>
-          <title> N&amp;H Wholesale Florist Co., Inc.</title>
+          <title> N&H Wholesale Florist Co., Inc.</title>
           <meta charset="utf-8" />
           <!-- Link to CSS file -->
           <link rel="stylesheet" type="text/css" href="css/search.css" />
