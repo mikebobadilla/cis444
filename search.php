@@ -10,7 +10,7 @@
 
 <html lang="en">
      <head>
-          <title> N&H Wholesale Florist Co., Inc.</title>
+          <title> N&amp;H Wholesale Florist Co., Inc.</title>
           <meta charset="utf-8" />
           <!-- Link to CSS file -->
           <link rel="stylesheet" type="text/css" href="css/search.css" />
@@ -21,7 +21,7 @@
                <?php require("nav.php"); ?>
                <!-- Header for Search bar  -->
                <div>
-                    <h1 class="searchHeader"> N&H Wholesale Florist Inventory Search </h1>
+                    <h1 class="searchHeader"> N&amp;H Wholesale Florist Inventory Search </h1>
                </div>
                <!-- Search Bar -->
                <div class="searchContainer">

@@ -1,14 +1,14 @@
-<!-- Jason Sneddon - snedd001
-     Roger Delgado - delga051
-     Kristina Nystrom - nystr001
-     Zachary Go - goo06
-     Michael Bobadilla - bobad05
-     CIS 444 - Term Project
-     login.php
--->
 <?php
+// Jason Sneddon - snedd001
+// Roger Delgado - delga051
+// Kristina Nystrom - nystr001
+// Zachary Go - goo06
+// Michael Bobadilla - bobad05
+// CIS 444 - Term Project
+// login.php
+
 	include('includes/session.php');
-	ob_start();
+		ob_start();
 
 	if (isset($_SESSION["user"])){
 		header("Location: index.php");
@@ -55,7 +55,6 @@
 	    if( $count == 1 && $row['Password'] == $password ) {
 	      $_SESSION['user'] = $row['Email'];
 	      $_SESSION['role'] = $row['Permissions'];
-				echo "success";
 	      header("Location: index.php");
 	    } else {
 	      $errMSG = "Incorrect Credentials, Try again...";
