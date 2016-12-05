@@ -1,9 +1,10 @@
 <?php
+	include('includes/session.php');
+	ob_start();
+
 	if (isset($_SESSION["user"])){
 		header("Location: index.php");
 	}
-	ob_start();
-	include('includes/session.php');
 
 	$error = false;
 
@@ -39,12 +40,13 @@
 	  // if there's no error, continue to signup
 	  if( !$error ) {
 
-			$res = mysqli_query($link, "SELECT UserID, Email, Password FROM users WHERE Email='$email'");
+			$res = mysqli_query($link, "SELECT UserID, Email, Password, Permissions FROM users WHERE Email='$email'");
     	$row=mysqli_fetch_array($res);
     	$count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
 
 	    if( $count == 1 && $row['Password'] == $password ) {
 	      $_SESSION['user'] = $row['Email'];
+	      $_SESSION['role'] = $row['Permissions'];
 				echo "success";
 	      header("Location: index.php");
 	    } else {

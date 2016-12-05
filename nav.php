@@ -5,14 +5,22 @@
 
 					<li> <a id=cart href="cart.php"><img src="image_folder/cart.png" alt="" width="30px" height="30px"/></a></li>
 					<?php
-						include("includes/session.php");
-						if(!isset($_SESSION["user"]) || empty($_SESSION["user"])){
+						if(!isset($_SESSION["user"])){
 						?>
 						<li> <a id="menuLogin" href="login.php"> Login </a></li>
 						<?php
 						} else {
 							?>
-							<li> <a id="logout" href="logout.php?logout"> Logout </a></li>
+							<li> <a href="#">Menu</a>
+								<ul class="dropdown">
+									<li><a id="logout" href="logout.php?logout"> Logout </a></li>
+									<li><a id="Profile" href="profile.php"> Profile </a></li>
+									<li><a id="Dashboard" href="logout.php?logout"> Dashboard </a></li>
+									<?php if($_SESSION["role"] == "Admin") {?>
+									<?php } ?>
+								</ul>
+
+							</li>
 							<?php
 						}
 					?>
