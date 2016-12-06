@@ -8,7 +8,6 @@
      index.php
 -->
 <?php include("includes/session.php"); ?>
-<?php var_dump($_SESSION); ?>
 <html lang="en">
      <head>
           <title> N&amp;H Wholesale Florist Co., Inc. </title>
