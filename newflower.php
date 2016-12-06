@@ -1,5 +1,3 @@
-<?php include("includes/admin_check.php"); ?>
-
 <?php
   include("includes/admin_check.php");
 
@@ -35,7 +33,7 @@
 		$description = strip_tags($description);
 		$description = htmlspecialchars($description);
 
-
+		$error = false;
 
 		// basic name validation
 		if (empty($name) || empty($picture) || empty($price) || empty($color) || empty($quantity) || empty($category) || empty($description)) {
@@ -87,7 +85,7 @@
 					if ( isset($errMSG) ) {echo $errMSG;}
 					?>
 					<div class="form-wrapper" class="login">
-						<form class="form-row w-400" action="newFlower.php" method="post">
+						<form class="form-row w-400" action="newflower.php" method="post">
 							<div class="form-content">
 								<label for="flowername">Flower Name</label>
 								<input type="text" name="flowername" value="">
