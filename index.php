@@ -26,10 +26,10 @@
                </div>
                <!-- Search Bar -->
                <div class="searchContainer">
-                    <form>
+                    <form action="search.php" method="get">
                          <div id="innerSearch">
                               <br />
-                              <input id="searchBox" type="text" placeholder="Ex:Color,Name,Type..." />
+                              <input id="searchBox" name="search" type="text" placeholder="Ex:Color,Name,Type..." />
                          </div>
                     </form>
                </div>
