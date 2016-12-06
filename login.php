@@ -1,18 +1,22 @@
 <?php
-	if (isset($_SESSION['email'])){
-		header("Location: contact.php");
-	}
-	ob_start();
+// Jason Sneddon - snedd001
+// Roger Delgado - delga051
+// Kristina Nystrom - nystr001
+// Zachary Go - goo06
+// Michael Bobadilla - bobad05
+// CIS 444 - Term Project
+// login.php
+
 	include('includes/session.php');
+		ob_start();
+
+	if (isset($_SESSION["user"])){
+		header("Location: index.php");
+	}
 
 	$error = false;
 
-	if(isset($_POST['btn-signup'])){
-		// clean user inputs to prevent sql injections
-	  $name = trim($_POST['name']);
-	  $name = strip_tags($name);
-	  $name = htmlspecialchars($name);
-
+	if(isset($_POST['btn-signin'])){
 	  $email = trim($_POST['email']);
 	  $email = strip_tags($email);
 	  $email = htmlspecialchars($email);
@@ -21,39 +25,21 @@
 	  $pass = strip_tags($pass);
 	  $pass = htmlspecialchars($pass);
 
-	  // basic name validation
-	  if (empty($name)) {
-	   $error = true;
-	   $nameError = "Please enter your full name.";
-	  } else if (strlen($name) < 3) {
-	   $error = true;
-	   $nameError = "Name must have atleat 3 characters.";
-	  } else if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
-	   $error = true;
-	   $nameError = "Name must contain alphabets and space.";
-	  }
-
 	  //basic email validation
-	  if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
+	  if ( !eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email) ) {
 	   $error = true;
 	   $emailError = "Please enter valid email address.";
-	  } else {
-	   // check email exist or not
-	   $query = "SELECT userEmail FROM users WHERE userEmail='$email'";
-	   $result = mysql_query($query);
-	   $count = mysql_num_rows($result);
-	   if($count!=0){
-	    $error = true;
-	    $emailError = "Provided Email is already in use.";
-	   }
+		 echo $emailError;
 	  }
 	  // password validation
 	  if (empty($pass)){
 	   $error = true;
 	   $passError = "Please enter password.";
+		 echo $passError;
 	  } else if(strlen($pass) < 6) {
 	   $error = true;
 	   $passError = "Password must have atleast 6 characters.";
+		 echo $passError;
 	  }
 
 	  // password encrypt using SHA256();
@@ -62,21 +48,22 @@
 	  // if there's no error, continue to signup
 	  if( !$error ) {
 
-	   $query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$name','$email','$password')";
-	   $res = mysql_query($query);
+			$res = mysqli_query($link, "SELECT UserID, Email, Password, Permissions FROM USERS WHERE Email='$email'");
+    	$row=mysqli_fetch_array($res);
+    	$count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
 
-	   if ($res) {
-	    $errTyp = "success";
-	    $errMSG = "Successfully registered, you may login now";
-	    unset($name);
-	    unset($email);
-	    unset($pass);
-	   } else {
-	    $errTyp = "danger";
-	    $errMSG = "Something went wrong, try again later...";
-	   }
+	    if( $count == 1 && $row['Password'] == $password ) {
+	      $_SESSION['user'] = $row['Email'];
+	      $_SESSION['role'] = $row['Permissions'];
+	      header("Location: index.php");
+	    } else {
+	      $errMSG = "Incorrect Credentials, Try again...";
+				echo $errMSG;
+	    }
 
-	  }
+	  } else {
+			echo "error";
+		}
 	}
 ?>
 <!DOCTYPE html>
@@ -85,6 +72,7 @@
 		<title>Login Page</title>
 		<link rel="stylesheet" type="text/css" href="css/login.css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
 	</head>
 	<body>
 		<div class="topDivider">
@@ -96,12 +84,12 @@
 			<div class="form-wrapper" class="login">
 				<form class="form-content" action="login.php" method="post">
 					<label for="email">Email</label>
-					<input type="text" name="login-username" value="">
+					<input type="text" name="email" value="">
 					<label for="pass">Password</label>
-					<input type="password" name="login-password" value="">
+					<input type="password" name="pass" value="">
 					<br>
 					<div class="form-row">
-						<button type="submit" name="button">Submit</button>
+						<button type="submit" name="btn-signin">Submit</button>
 					</div>
 				</form>
 			</div>

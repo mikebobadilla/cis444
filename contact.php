@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <!-- Jason Sneddon - snedd001
+     Roger Delgado - delga051
+     Kristina Nystrom - nystr001
+     Zachary Go - goo06
+     Michael Bobadilla - bobad05
      CIS 444 - Term Project
-     contact_us.html
+     contact_us.php
 
 
 -->
@@ -12,6 +16,7 @@
           <meta charset="utf-8" />
           <!-- Link to CSS file -->
           <link rel="stylesheet" type="text/css" href="css/contact.css" />
+          <link rel="stylesheet" type="text/css" href="css/nav.css" />
      </head>
      <body>
           <?php require("nav.php"); ?>
@@ -54,9 +59,9 @@
                     <p id="companyInfo">
                          Location: <br />
                          N&amp;H Wholesale Florist Co., Inc. <br />
-                         333 Twin Oaks Valley Rd. <br />
-                         San Marcos, Ca. 92054<br />
-                         (123)-456-7890<br /><br />
+                         28520 Twin Oaks Valley Rd. <br />
+                         Vista, Ca. 92084<br />
+                         (760)-809-8240<br /><br />
 
                          Hours of Operation: <br />
                          Monday - 7:00am to 5:00pm <br />
@@ -66,8 +71,8 @@
                          Friday - 7:00am to 5:00pm <br />
                          Saturday - 9:00am to 1:00pm <br /> <br />
 
-                         If you have any questions, don't hesisitate to call us at (123)-456-7890<br/>
-                         You can also contact us via email address below.
+                         If you have any questions, don't hesitate to call us at (760)-809-8240<br/>
+                         You can also contact us via email below.
                     </p>
                     <br /><br />
                     <div class="textBoxes">

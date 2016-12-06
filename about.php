@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <!-- Jason Sneddon - snedd001
-	Roger Delgado - delga051
-	Kristina Nystrom - nystr001
+     Roger Delgado - delga051
+     Kristina Nystrom - nystr001
+     Zachary Go - goo06
+     Michael Bobadilla - bobad05
      CIS 444 - Term Project
-     About_Us.html
+     About_Us.php
 
 -->
 
@@ -13,6 +15,7 @@
           <meta charset="utf-8" />
           <!-- Link to CSS file -->
           <link rel="stylesheet" type="text/css" href="css/about.css" />
+          <link rel="stylesheet" type="text/css" href="css/nav.css" />
      </head>
      <body>
       <?php require("nav.php"); ?>
@@ -62,11 +65,11 @@
                          Family owned and operated since 2006.<br />
 						 220 acres of beautiful flowers nestled in the inland hills of Northern San Diego County.<br />
                          We specialize in a wide variety of elegant and memorable cut flowers and greens that thrive in Southern California.<br />
-                         The flower farm was purchased solely as a real-estate investment in 2003. However, upon investigating the warehouse on 
+                         The flower farm was purchased solely as a real-estate investment in 2003. However, upon investigating the warehouse on
 						 top of the first 40-acre property we discovered the remnants of dyed Eucalyptus leaves. This peaked the owner, Kim Nystrom’s,
-						 interest. She started growing baby plants in the green house as a hobby a couple of days a week. Later, she started spending 
-						 all daylight hours at the property. Before the rest of the family knew what was going on she created a company, hired workers, 
-						 and started planting. She then proceeded to purchase surrounding land thus expanding the business. With the expansion of the 
+						 interest. She started growing baby plants in the green house as a hobby a couple of days a week. Later, she started spending
+						 all daylight hours at the property. Before the rest of the family knew what was going on she created a company, hired workers,
+						 and started planting. She then proceeded to purchase surrounding land thus expanding the business. With the expansion of the
 						 company, Kim recruited her family members to help manage the company. <br />
                     </p>
 <!-- PICTURE OF FLOWER FARM OR OWNERS -->

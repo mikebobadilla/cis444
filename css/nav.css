@@ -1,0 +1,21 @@
+.dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.dropdown li{
+  float: none;
+  width: 120px;
+  background: #163f5a;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li:hover > ul {
+  display: block;
+}

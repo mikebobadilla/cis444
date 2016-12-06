@@ -1,18 +1,34 @@
+<!-- Jason Sneddon - snedd001
+     Roger Delgado - delga051
+     Kristina Nystrom - nystr001
+     Zachary Go - goo06
+     Michael Bobadilla - bobad05
+     CIS 444 - Term Project
+     nav.php
+-->
 <!-- Container for Menu Bar -->
 		 <!-- Menu Bar -->
 		 <ul class="menu">
 					<li id="businessName"> <a href="index.php"> N&amp;H Wholesale Florist Co., Inc. </a> </li>
 
-					<li> <a id=cart href="cart.php"><img src="image_folder/cart.png" alt="" width="30px" height="30px"/></a></li>
+					<li> <a id=cart href="checkout.php"><img src="image_folder/cart.png" alt="" width="30px" height="30px"/></a></li>
 					<?php
-						include("includes/session.php");
-						if(!isset($_SESSION["username"]) || empty($_SESSION["username"])){
+						if(!isset($_SESSION["user"])){
 						?>
 						<li> <a id="menuLogin" href="login.php"> Login </a></li>
 						<?php
 						} else {
 							?>
-							<li> <a id="logout" href="logout.php?logout"> Logout </a></li>
+							<li> <a href="#">Menu</a>
+								<ul class="dropdown">
+									<li><a id="Profile" href="profile.php"> Profile </a></li>
+									<?php if($_SESSION["role"] == "Admin") {?>
+										<li><a id="Dashboard" href="admin.php"> Dashboard </a></li>
+									<?php } ?>
+									<li><a id="logout" href="logout.php?logout"> Logout </a></li>
+								</ul>
+
+							</li>
 							<?php
 						}
 					?>
