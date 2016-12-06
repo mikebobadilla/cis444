@@ -11,7 +11,7 @@
 		 <ul class="menu">
 					<li id="businessName"> <a href="index.php"> N&amp;H Wholesale Florist Co., Inc. </a> </li>
 
-					<li> <a id=cart href="cart.php"><img src="image_folder/cart.png" alt="" width="30px" height="30px"/></a></li>
+					<li> <a id=cart href="checkout.php"><img src="image_folder/cart.png" alt="" width="30px" height="30px"/></a></li>
 					<?php
 						if(!isset($_SESSION["user"])){
 						?>

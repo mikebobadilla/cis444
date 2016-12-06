@@ -1,13 +1,21 @@
+<?php
+  include("includes/session.php");
+  if(isset($_GET["search"])){
+    $res = mysqli_query($link, "SELECT * FROM FLOWERS WHERE FlowerID = $id");
+
+  } else {
+    $res = mysqli_query($link, "SELECT * FROM FLOWERS");
+  }
+?>
 <!DOCTYPE html>
 <!-- Jason Sneddon - snedd001
-     Roger Delgado - delga051
-     Kristina Nystrom - nystr001
-     Zachary Go - goo06
-     Michael Bobadilla - bobad05
-     CIS 444 - Term Project
-     index.php
+Roger Delgado - delga051
+Kristina Nystrom - nystr001
+Zachary Go - goo06
+Michael Bobadilla - bobad05
+CIS 444 - Term Project
+index.php
 -->
-<?php include("includes/session.php"); ?>
 <html lang="en">
      <head>
           <title> N&amp;H Wholesale Florist Co., Inc. </title>
@@ -40,74 +48,22 @@
                <!-- First Row of Flower Pictures -->
                <div class="Flowers">
                     <ul class="flowerRows">
+                        <?php
+                          while($row = mysqli_fetch_array($res)){
+                            $image = $row["Picture"];
+                            $name = $row["FlowerName"];
+                            $description = $row["Description"];
+                            $id = $row["FlowerID"];
+                        ?>
                          <li>
                               <figure>
-                                   <a id="forsythia" href="#forsythia"> <img src="image_folder/forsythia.jpg" alt="Forsythia Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Forsynthia Flower </figcaption>
+                                   <a id="<?php echo "flowerID_" . $id ?>" href="flower.php?flowerID=<?php echo $id ?>"> <img src="image_folder/<?php echo $image; ?>" alt="<?php echo $name; ?>" style="width: 250px; height: 250px; border: 0"></a>
+                                   <figcaption><?php echo $name; ?></figcaption>
                               </figure>
                          </li>
-                         <li>
-                              <figure>
-                                   <a id="purpleWaxflower" href="#purpleWaxFlower"> <img src="image_folder/purpleWaxFlower.jpg" alt="Purple Wax Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Purple Wax Flower </figcaption>
-                              </figure>
-                         </li>
-                         <li>
-                              <figure>
-                                   <a id="pinCushionOrange" href="#pinCushionOrange"> <img src="image_folder/pinCushionOrange.jpg" alt="Orange Pin Cushion Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Orange Pin Cushion </figcaption>
-                              </figure>
-                         </li>
-
+                         <?php } ?>
                </div>
-               <!-- Second Row of Flower Pictures -->
 
-               <div class="Flowers">
-                    <ul class="flowerRows">
-                      <li>
-                              <figure>
-                                   <a href="#proteaPinkIce"> <img src="image_folder/proteaPinkIce.jpg" alt="Protea Pink Ice Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                      <figcaption> Protea Pink Ice Flower </figcaption>
-                              </figure>
-                       </li>
-
-                         <li>
-                              <figure>
-                                   <a id="riceFlower" href="#riceFlower"> <img src="image_folder/riceFlower.jpg" alt="Rice Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Rice Flower </figcaption>
-                              </figure>
-                         </li>
-                         <li>
-                              <figure>
-                                   <a href="#leptospermum_White"> <img src="image_folder/nh_whiteleptosperum.jpg" alt="Leptospermum White Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> White Leptospermum </figcaption>
-                              </figure>
-                         </li>
-                    </ul>
-               </div>
-               <!-- Third Row of Flower Pictures -->
-               <div class="Flowers">
-                    <ul class="flowerRows">
-                         <li>
-                              <figure>
-                                   <a href="#gunnii"> <img src="image_folder/gunnii.jpg" alt="Eucalyptus Gunni" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Gunnii </figcaption>
-                              </figure>
-                         </li>
-                         <li>
-                              <figure>
-                                   <a href="#saxicola"> <img src="image_folder/saxicola.jpg" alt="Saxicola Flower" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Saxicola </figcaption>
-                              </figure>
-                         </li>
-                         <li>
-                              <figure>
-                                   <a href="#silverDollar"> <img src="image_folder/nh_silverdollar4.jpg" alt="Eucalyptus Silver Dollar" style="width: 250px; height: 250px; border: 0"></a>
-                                   <figcaption> Silver Dollar Eucalyptus </figcaption>
-                              </figure>
-                         </li>
-                    </ul>
-               </div>
           </div>
           <div class="bottomDivider">
                <p>
