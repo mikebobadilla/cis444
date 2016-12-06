@@ -1,5 +1,18 @@
 <?php
   include("includes/admin_check.php");
+  if(isset($_POST["deleteFlower"])){
+    $id = $_POST["deleteFlower"];
+    $query = "DELETE FROM FLOWERS WHERE FlowerID = $id";
+    $res = mysqli_query($link, $query);
+  }
+
+  if(isset($_POST["deleteUser"])){
+    $id = $_POST["deleteUser"];
+
+    $query = "DELETE FROM USERS WHERE UserID = $id";
+    $res = mysqli_query($link, $query);
+
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,8 +52,11 @@
                   <td><img src="image_folder/<?php echo $image; ?>" alt="<?php echo $name ?>" /></td>
                   <td><?php echo $name; ?></td>
                   <td><a href="editflower?id=<?php echo $id; ?>">Edit</a></td>
-                  <td><a onClick="deleteFlower(<?php echo $id; ?>)" href="#" >Delete?</a></td>
+                  <td><a onClick="deleteFlower(event, <?php echo $id; ?>)" href="#" >Delete?</a></td>
                 </tr>
+                <form id="deleteFlower<?php echo $id ?>" stlye="display:none" action="admin.php" method="post">
+                  <input type="hidden" name="deleteFlower" value="<?php echo $id ?>">
+                </form>
            <?php } ?>
            </table>
          </div>
@@ -77,8 +93,11 @@
                 <td><?php echo $email; ?></td>
                 <td><?php echo $role; ?></td>
                 <td><a href="edituser?id=<?php echo $id; ?>">Edit</a></td>
-                <td><a onClick="deleteUser(<?php echo $id; ?>)" href="#" >Delete?</a></td>
+                <td><a onClick="deleteUser(event, <?php echo $id; ?>)" href="#" >Delete?</a></td>
               </tr>
+              <form id="deleteUser<?php echo $id ?>" stlye="display:none" action="admin.php" method="post">
+                <input type="hidden" name="deleteUser" value="<?php echo $id ?>">
+              </form>
           <?php } ?>
             </table>
           </div>
@@ -87,12 +106,5 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript">
-    var deleteUser = function(id){
-      alert(id);
-    }
-    var deleteFlower = function(id){
-      alert(id);
-    }
-  </script>
+  <script type="text/javascript" src="js/script.js"></script>
 </html>

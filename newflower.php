@@ -81,6 +81,7 @@
     <div class="wrapper">
       <div class="content">
         <div class="info left">
+          <a href="admin.php"><h4>Back to admin panel</h4></a> <br>
 					<?php
 					if ( isset($errMSG) ) {echo $errMSG;}
 					?>
