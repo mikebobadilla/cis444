@@ -95,7 +95,7 @@
 	  if( !$error ) {
 
 	  $query = "INSERT INTO USERS (FirstName,LastName,Username,Email, Password, Permissions, Company, Street, City, State, Zipcode)
-							VALUES ('$firstName', '$lastName', '$email' ,'$email','$password','User','$company', '$street', '$city', '$state', '$zip')";
+							VALUES ('$firstName', '$lastName', '$email' ,'$email','$password','Admin','$company', '$street', '$city', '$state', '$zip')";
 
 	  $res = mysqli_query($link, $query);
 
