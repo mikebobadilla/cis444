@@ -21,9 +21,9 @@
 							?>
 							<li> <a href="#">Menu</a>
 								<ul class="dropdown">
-									<li><a id="logout" href="logout.php?logout"> Logout </a></li>
 									<li><a id="Profile" href="profile.php"> Profile </a></li>
-									<li><a id="Dashboard" href="logout.php?logout"> Dashboard </a></li>
+									<li><a id="Dashboard" href="admin.php"> Dashboard </a></li>
+									<li><a id="logout" href="logout.php?logout"> Logout </a></li>
 									<?php if($_SESSION["role"] == "Admin") {?>
 									<?php } ?>
 								</ul>

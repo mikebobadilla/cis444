@@ -19,11 +19,12 @@
      position: relative;
      list-style-type: none;
      padding: 20px;
-     margin-left: auto;
-     margin-right: auto;
+     margin: auto;
+     margin-top: 10px;
      min-width: 1024px;
      height: 70px;
      background-color: #102e42;
+     z-index: 1;
 }
 /* Set business name to the left of menu bar */
 #businessName{
