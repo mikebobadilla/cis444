@@ -22,10 +22,10 @@
 							<li> <a href="#">Menu</a>
 								<ul class="dropdown">
 									<li><a id="Profile" href="profile.php"> Profile </a></li>
-									<li><a id="Dashboard" href="admin.php"> Dashboard </a></li>
-									<li><a id="logout" href="logout.php?logout"> Logout </a></li>
 									<?php if($_SESSION["role"] == "Admin") {?>
+										<li><a id="Dashboard" href="admin.php"> Dashboard </a></li>
 									<?php } ?>
+									<li><a id="logout" href="logout.php?logout"> Logout </a></li>
 								</ul>
 
 							</li>

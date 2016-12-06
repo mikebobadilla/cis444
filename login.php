@@ -26,7 +26,7 @@
 	  $pass = htmlspecialchars($pass);
 
 	  //basic email validation
-	  if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
+	  if ( !eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email) ) {
 	   $error = true;
 	   $emailError = "Please enter valid email address.";
 		 echo $emailError;
@@ -48,7 +48,7 @@
 	  // if there's no error, continue to signup
 	  if( !$error ) {
 
-			$res = mysqli_query($link, "SELECT UserID, Email, Password, Permissions FROM users WHERE Email='$email'");
+			$res = mysqli_query($link, "SELECT UserID, Email, Password, Permissions FROM USERS WHERE Email='$email'");
     	$row=mysqli_fetch_array($res);
     	$count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
 
@@ -72,6 +72,7 @@
 		<title>Login Page</title>
 		<link rel="stylesheet" type="text/css" href="css/login.css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
 	</head>
 	<body>
 		<div class="topDivider">

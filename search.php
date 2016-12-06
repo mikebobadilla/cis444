@@ -14,6 +14,7 @@
           <meta charset="utf-8" />
           <!-- Link to CSS file -->
           <link rel="stylesheet" type="text/css" href="css/search.css" />
+          <link rel="stylesheet" type="text/css" href="css/nav.css" />
      </head>
      <body>
           <div class="topDivider">

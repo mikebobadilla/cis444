@@ -16,6 +16,7 @@
           <meta charset="utf-8" />
           <!-- Link to CSS file -->
           <link rel="stylesheet" type="text/css" href="css/contact.css" />
+          <link rel="stylesheet" type="text/css" href="css/nav.css" />
      </head>
      <body>
           <?php require("nav.php"); ?>

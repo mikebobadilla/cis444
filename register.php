@@ -67,13 +67,13 @@
 	  }
 
 	  //basic email validation
-	  if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
+	  if ( !eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email) ) {
 	   $error = true;
 	   $emailError = "Please enter valid email address.";
 	  } else {
 	   // check email exist or not
-	   $query = "SELECT Email FROM USER WHERE Email='$email'";
-	   $result = mysqli_query($query);
+	   $query = "SELECT Email FROM USERS WHERE Email='$email'";
+	   $result = mysqli_query($link, $query);
 	   $count = mysqli_num_rows($result);
 	   if($count!=0){
 	    $error = true;
@@ -129,6 +129,7 @@
 		<title>Registration Page Page</title>
 		<link rel="stylesheet" type="text/css" href="css/login.css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
 	</head>
 	<body>
 		<div class="topDivider">
