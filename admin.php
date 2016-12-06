@@ -1,11 +1,5 @@
 <?php
   include("includes/admin_check.php");
-  $editUser = $_GET["user"];
-  $editFlower = $_GET["flower"];
-  $res = mysqli_query($link, "SELECT * FROM users");
-  $users = mysqli_fetch_array($res);
-  $res = mysqli_query($link, "SELECT * FROM flowers");
-  $flowers = mysqli_fetch_array($res);
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,11 +25,26 @@
 
       .info {
         display: flex;
+        flex-direction: column;
         width: 50%;
+      }
+
+      .info div {
+        margin-bottom: 10px;
       }
 
       .left {
         align-self: flex-start;
+      }
+
+      .item {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .item img {
+        width: 50px;
+        height: 50px;
       }
     </style>
   </head>
@@ -46,12 +55,62 @@
     <div class="wrapper">
       <div class="content">
         <div class="info left">
+
           <h4>Flowers</h4>
 
+          <?php
+            $res = mysqli_query($link, "SELECT * FROM FLOWERS");
+            while($row = mysqli_fetch_array($res)){
+              $image = $row["Picture"];
+              $name = $row["FlowerName"];
+              $id = $row["FlowerID"];
+          ?>
+
+              <div class="item">
+                <img src="image_folder/<?php echo $image; ?>" alt="<?php echo $name ?>" />
+                <span>
+                  <?php echo $name; ?>
+                </span>
+              </div>
+           <?php } ?>
         </div>
         <div class="info left">
-          <h4>Users</h4>
 
+          <h4>Users</h4>
+          <div class="item">
+          <table>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Permission</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+
+          <?php
+            $res = mysqli_query($link, "SELECT * FROM users");
+            $flowers = mysqli_fetch_array($res);
+            while($row = mysqli_fetch_array($res)){
+              $first = $row["FirstName"];
+              $last = $row["LastName"];
+              $email = $row["Email"];
+              $role = $row["Permissions"];
+              $id = $row["UserID"];
+          ?>
+
+
+              <tr>
+                <td><?php echo $first; ?></td>
+                <td><?php echo $last; ?></td>
+                <td><?php echo $email; ?></td>
+                <td><?php echo $role; ?></td>
+                <td><?php echo $id; ?></td>
+                <td><?php echo $id; ?></td>
+              </tr>
+          <?php } ?>
+            </table>
+          </div>
         </div>
 
       </div>
