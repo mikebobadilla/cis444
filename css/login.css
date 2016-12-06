@@ -11,15 +11,15 @@ body {
 }
 
 .menu{
-     position: relative;
-     list-style-type: none;
-     padding: 20px;
-     margin-left: auto;
-     margin-right: auto;
-     min-width: 1024px;
-     overflow: hidden;
-     background-color: black;
-     opacity: 0.7;
+		position: relative;
+		list-style-type: none;
+		padding: 20px;
+		margin: auto;
+		margin-top: 10px;
+		min-width: 1024px;
+		height: 70px;
+		background-color: #1F618D;
+		z-index: 1;
 }
 
 /* Set business name to the left of menu bar */
@@ -93,8 +93,20 @@ input[type=text], input[type=password]  {
 		width: 220px;
     padding: 12px 20px;
     margin-top: 10px;
+    margin-bottom: 10px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+textarea {
+	resize: none;
+	width: 300px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+input, textarea, select {
+	margin: 10px;
 }

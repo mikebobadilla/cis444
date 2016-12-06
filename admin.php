@@ -19,6 +19,7 @@
         <div class="info left">
 
           <h4>Flowers</h4>
+          <p><a href="newFlower.php">Add New Flower</a></p>
           <div class="item">
           <table>
             <tr>
@@ -37,8 +38,8 @@
                 <tr>
                   <td><img src="image_folder/<?php echo $image; ?>" alt="<?php echo $name ?>" /></td>
                   <td><?php echo $name; ?></td>
-                  <td><?php echo $id; ?></td>
-                  <td><?php echo $id; ?></td>
+                  <td><a href="editflower?id=<?php echo $id; ?>">Edit</a></td>
+                  <td><a onClick="deleteFlower(<?php echo $id; ?>)" href="#" >Delete?</a></td>
                 </tr>
            <?php } ?>
            </table>
@@ -75,8 +76,8 @@
                 <td><?php echo $last; ?></td>
                 <td><?php echo $email; ?></td>
                 <td><?php echo $role; ?></td>
-                <td><?php echo $id; ?></td>
-                <td><?php echo $id; ?></td>
+                <td><a href="edituser?id=<?php echo $id; ?>">Edit</a></td>
+                <td><a onClick="deleteUser(<?php echo $id; ?>)" href="#" >Delete?</a></td>
               </tr>
           <?php } ?>
             </table>
@@ -86,4 +87,12 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    var deleteUser = function(id){
+      alert(id);
+    }
+    var deleteFlower = function(id){
+      alert(id);
+    }
+  </script>
 </html>

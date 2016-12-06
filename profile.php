@@ -1,4 +1,4 @@
-<?php include("includes/user_check.php"); ?>
+<?php require("includes/user_check.php"); ?>
 <!DOCTYPE html>
 <html>
   <head>
