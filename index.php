@@ -1,3 +1,4 @@
+<?php require("includes/session.php"); ?>
 <!DOCTYPE html>
 <!-- Jason Sneddon - snedd001
      Roger Delgado - delga051

@@ -1,7 +1,30 @@
 <?php
   include("includes/session.php");
+  var_dump($_COOKIE);
+  var_dump($_POST);
   if(isset($_POST["btn-checkout"])){
     $id = $_POST["flowerID"];
+    if(empty($_COOKIE["items"])){
+      $cookie = array($id);
+      $cookie = serialize($cookie);
+      setcookie("items", $cookie, 86400 * 10);
+      setcookie("count", 1, 86400 * 10);
+    } else {
+      $count = $_COOKIE["count"] + 1;
+      $cookie = $_COOKIE["items"];
+      $cookie = unserialize($cookie);
+      array_push($cookie, $id);
+      $cookie = serialize($cookie);
+      setcookie("items", $cookie, 86400 * 10);
+      setcookie("count", $count, 86400 * 10);
+    }
+  }
+
+  if(isset($_COOKIE["items"])){
+    $cookie = $_COOKIE["items"];
+    $cookie = unserialize($cookie);
+    echo "+++++++";
+    $res = mysqli_query($link, "SELECT * FROM FLOWERS WHERE FlowerID IN ". implode(", ", $cookie));
   }
 
 ?>
@@ -20,32 +43,7 @@
     </div>
     <div class="wrapper">
       <div class="content">
-        <?php
-          $res = mysqli_query($link, "SELECT * FROM FLOWERS WHERE FlowerID = $id");
-          while($row = mysqli_fetch_array($res)){
-            $image = $row["Picture"];
-            $name = $row["FlowerName"];
-            $description = $row["Description"];
-            $id = $row["FlowerID"];
-        ?>
-        <div class="info left">
-          <h4><?php echo $name; ?></h4>
-          <p>
-            <img class="des-image" src="image_folder/<?php echo $image; ?>" alt="<?php echo $name; ?>" />
-          </p>
-        </div>
-        <div class="info left">
-          <h4>Description</h4>
-          <p>
-            <?php echo $description; ?>
-          </p>
-          <form class="" action="checkout.php" method="post">
-            <input type="hidden" name="flowerID" value="<?php echo $id; ?>">
-            <button type="submit" name="btn-checkout">Add to cart</button>
-          </form>
-        </div>
-      </div>
-      <?php } ?>
+
     </div>
   </body>
 </html>
