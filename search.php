@@ -1,7 +1,14 @@
 <?php
   include("includes/session.php");
   if(isset($_GET["search"])){
-    $res = mysqli_query($link, "SELECT * FROM FLOWERS WHERE FlowerID = $id");
+    $str = $_GET["search"];
+    $search = explode(" " , $str);
+    $sql = array('0');
+    foreach($search as $word){
+      $sql[] = 'FlowerName LIKE "%'.$word.'%"';
+    }
+    $sql = "SELECT * FROM FLOWERS WHERE ".implode(" OR ", $sql);
+    $res = mysqli_query($link, $sql);
 
   } else {
     $res = mysqli_query($link, "SELECT * FROM FLOWERS");
@@ -33,10 +40,10 @@ index.php
                </div>
                <!-- Search Bar -->
                <div class="searchContainer">
-                    <form>
+                    <form action="search.php" method="get">
                          <div id="innerSearch">
                               <br />
-                              <input id="searchBox" type="text" placeholder="Search Flowers..." />
+                              <input id="searchBox" name="search" type="text" placeholder="Search Flowers..." />
                          </div>
                     </form>
                </div>
