@@ -19,7 +19,7 @@
         <div class="info left">
 
           <h4>Flowers</h4>
-          <p><a href="newFlower.php">Add New Flower</a></p>
+          <p><a href="newflower.php">Add New Flower</a></p>
           <div class="item">
           <table>
             <tr>
@@ -60,7 +60,7 @@
             </tr>
 
           <?php
-            $res = mysqli_query($link, "SELECT * FROM users");
+            $res = mysqli_query($link, "SELECT * FROM USERS");
             $flowers = mysqli_fetch_array($res);
             while($row = mysqli_fetch_array($res)){
               $first = $row["FirstName"];
